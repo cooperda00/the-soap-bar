@@ -1,0 +1,23 @@
+@import "../../../vars";
+
+.Info {
+  @include flex(column, flex-start, center);
+  min-height: 60vh;
+  padding: 6rem;
+
+  h1,
+  p {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  h1 {
+    @include font("XL");
+    letter-spacing: 3px;
+  }
+
+  p {
+    @include font("M");
+  }
+}

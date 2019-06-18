@@ -1,0 +1,39 @@
+@import "../../vars";
+
+.Hero {
+  @include flex(column, center, center);
+  background: linear-gradient(#e89db6dd, rgba(0, 0, 0, 0.6));
+  background-position: center;
+  background-size: cover;
+
+  opacity: 1 !important;
+  width: 100%;
+}
+
+.Copy {
+  @include flex(column, center, center);
+
+  h1,
+  h2 {
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  h1 {
+    @include font("XXL");
+    letter-spacing: 3px;
+  }
+
+  h2 {
+    @include font("XL");
+  }
+}
+
+.Home {
+  min-height: calc(100vh - 100px);
+}
+
+.Page {
+  min-height: 60vh;
+}

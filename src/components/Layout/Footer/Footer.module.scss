@@ -1,0 +1,13 @@
+@import "../../../vars";
+
+.Footer {
+  @include flex(row, center, center);
+  width: 100%;
+  background: $charcoal;
+  height: 70px;
+
+  h1 {
+    @include font("S");
+    color: white;
+  }
+}

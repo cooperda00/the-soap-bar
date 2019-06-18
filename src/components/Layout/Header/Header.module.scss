@@ -1,0 +1,118 @@
+@import "../../../vars";
+
+.Header {
+  @include flex(row, space-between, center);
+
+  position: relative;
+  background: $lightgray;
+  height: 100px;
+  width: 100%;
+  padding: 0 5rem;
+}
+
+.Title {
+  @include flex(row, flex-start, center);
+  @include font("M");
+
+  h1 {
+    margin-left: 2rem;
+    display: none;
+
+    @include min-width(1000px) {
+      display: block;
+    }
+  }
+}
+
+.LogoContainer {
+  height: 60px;
+  width: 60px;
+
+  .Logo {
+    height: 100%;
+  }
+
+  @include min-width(1000px) {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+.Nav {
+  @include font("M");
+
+  width: 50%;
+  width: 25%;
+  display: none;
+
+  a:nth-child(1) {
+    margin-right: 2rem;
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, center);
+  }
+}
+
+.Cart {
+  @include font("XXL");
+
+  color: $primary;
+  display: none;
+  width: 25%;
+
+  button {
+    @include flex(column, center, center);
+    @include font("XXL");
+
+    background: none;
+    border: none;
+
+    width: 100%;
+
+    a {
+      cursor: pointer;
+      color: $primary;
+    }
+  }
+
+  @include min-width(1000px) {
+    display: block;
+  }
+}
+
+.Hamburger {
+  @include flex(column, center, center);
+
+  color: $primary;
+
+  button {
+    @include flex(column, center, center);
+    @include font("XXL");
+
+    background: none;
+    border: none;
+    color: $primary;
+    cursor: pointer;
+  }
+
+  @include min-width(1000px) {
+    display: none;
+  }
+}
+
+.Menu {
+  @include flex(column, flex-start, center);
+  position: absolute;
+  right: 0;
+  top: 100px;
+  padding: 3rem 5rem;
+  background: $lightgray;
+  border-left: 1px solid darken($lightgray, 10%);
+  border-bottom: 1px solid darken($lightgray, 10%);
+  z-index: 100;
+
+  a {
+    @include font("M");
+  }
+}

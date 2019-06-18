@@ -1,0 +1,56 @@
+@import "../../../vars";
+
+.Contact {
+  @include flex(column, flex-start, center);
+
+  background: lighten($secondary, 10%);
+  padding: 6rem 3rem;
+  min-height: 60vh;
+
+  h1 {
+    @include font("XL");
+    margin-bottom: 3rem;
+  }
+}
+
+.ContactForm {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  max-width: 700px;
+}
+
+.InputGroup {
+  margin-bottom: 3rem;
+  width: 100%;
+
+  label,
+  input,
+  textarea {
+    @include font("M");
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    padding: 0.5rem 1rem;
+  }
+
+  label {
+    display: block;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 400px;
+  }
+}
+
+.SubmitGroup {
+  input {
+    border: none;
+  }
+}
+
+.Submitted {
+  @include font("L");
+}

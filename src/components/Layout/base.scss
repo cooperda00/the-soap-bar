@@ -1,0 +1,78 @@
+@import "../../vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontStack;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+div,
+button,
+a {
+  color: $darkgray;
+}
+
+.btn-white {
+  @include font("M");
+
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.7rem;
+  padding: 0.5rem 3rem;
+  transition: 0.5s;
+
+  a .btn-white {
+    color: white;
+  }
+
+  &:hover {
+    background: white;
+    color: $primary;
+  }
+}
+
+.btn-primary {
+  @include font("M");
+
+  background: $primary;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.7rem;
+  padding: 0.5rem 3rem;
+  transition: 0.5s;
+
+  a .btn-primary {
+    color: white;
+  }
+
+  &:hover {
+    background: white;
+    color: $primary;
+  }
+}

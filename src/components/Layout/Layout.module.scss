@@ -1,0 +1,10 @@
+@import "../../vars";
+
+.Layout {
+  @include flex(column, space-between, center);
+  width: 100%;
+}
+
+.ContentWrapper {
+  width: 100%;
+}

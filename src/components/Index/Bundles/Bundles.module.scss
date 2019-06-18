@@ -1,0 +1,77 @@
+@import "../../../vars";
+
+.Bundles {
+  @include flex(column, flex-start, center);
+
+  padding: 6rem 3rem;
+  width: 100%;
+  min-height: 60vh;
+
+  h1 {
+    @include font("XL");
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+  }
+}
+
+.BundlesWrapper {
+  @include flex(row, center, flex-start);
+  flex-wrap: wrap;
+}
+
+.Bundle {
+  @include flex(column, flex-start, center);
+
+  position: relative;
+  margin: 3rem;
+  height: 400px;
+  width: 300px;
+  box-shadow: 3px 3px 3px 1px lightgray;
+}
+
+.Border {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 3px solid $primary;
+  top: -15px;
+  left: -15px;
+  z-index: 0;
+}
+
+.ImageContainer {
+  height: 60%;
+  width: 100%;
+  z-index: 200;
+
+  .Image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.Content {
+  @include flex(column, center, center);
+
+  background: white;
+  height: 40%;
+  width: 100%;
+  z-index: 200;
+
+  h2 {
+    @include font("L");
+
+    letter-spacing: 3px;
+  }
+
+  p {
+    @include font("M");
+
+    color: darken($primary, 20%);
+  }
+
+  button {
+    @include font("S");
+    margin-top: 1rem;
+  }
+}
